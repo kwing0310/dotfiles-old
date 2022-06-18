@@ -1,0 +1,32 @@
+add_newline = true
+
+format = """
+[┌── ](bold white)$username$directory$git_branch$cmd_duration
+[└─](bold white)$character"""
+
+[username]
+disabled = false
+show_always = true
+format = "[ $user]($style) "
+style_root = "bold orange"
+style_user = "bold blue"
+
+[directory]
+format = "[ ]($style)[$read_only]($read_only_style)[$path]($style) "
+style = "bold blue"
+read_only = " "
+read_only_style = "bold red"
+truncation_length = 100
+truncate_to_repo = false
+
+[git_branch]
+format = "[$symbol$branch](bold purple) "
+
+[cmd_duration]
+format = "[ $duration]($style)"
+style = "bold"
+min_time = 0
+
+[character]
+success_symbol = "[❯](bold blue)"
+error_symbol =   "[❯](bold red)"
