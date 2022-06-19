@@ -1,0 +1,100 @@
+# =========================
+#    Basic Configuration
+# =========================
+
+bindkey -v
+setopt auto_cd
+setopt extended_glob
+setopt hist_ignore_all_dups
+setopt hist_ignore_space
+autoload -Uz compinit && compinit
+
+# ===============
+#    Variables
+# ===============
+
+export LANG=en_US.UTF-8
+export EDITOR=nvim
+export GPG_TTY=$(tty)
+export GITHUB_USER=yui87
+export GOPATH=$HOME
+
+# Iceberg Dark
+# https://github.com/sheepla/dotfiles
+export BAT_THEME='base16'
+export EXA_COLORS=\
+'ur=1;34:'\
+'uw=1;36:'\
+'ux=1;32:'\
+'ue=1;;32:'\
+'gr=1;37:'\
+'gw=1;37:'\
+'gx=1;37:'\
+'tr=1;37:'\
+'tw=1;37:'\
+'tx=1;37:'\
+'su=1;37:'\
+'sf=1;37:'\
+'xa=1;32:'\
+'uu=1;34:'\
+'un=37:'\
+'gu=1;34:'\
+'gn=37:'\
+'da=37'
+
+# ===========
+#    Paths
+# ===========
+
+export PATH=/bin:$PATH
+export PATH=/sbin:$PATH
+export PATH=/usr/bin:$PATH
+export PATH=/usr/sbin:$PATH
+export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/sbin:$PATH
+
+export PATH=$HOME/.cargo/bin:$PATH
+export PATH=$HOME/.rbenv/bin:$PATH
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+export PATH=$GOPATH/bin:$PATH
+
+# =============
+#    Aliases
+# =============
+
+alias ..2='cd ../..'
+alias ..3='cd ../../..'
+alias ..4='cd ../../../..'
+alias ..5='cd ../../../../..'
+
+alias g='lazygit'
+alias gq='ghq'
+alias gg='gq get'
+
+alias b='bat'
+alias e='exa -I "node_modules|.git|.cache|.DS_Store"'
+alias ea='e -a'
+alias l='e -l'
+alias la='e -la'
+alias ll='lualatex'
+
+alias c='clear'
+alias ch='chezmoi'
+alias ca='ch apply'
+alias cc='ch cd'
+
+alias s='ssh'
+alias v='nvim'
+alias vv='v -c NERDTree -c Tagbar'
+alias w='w3m'
+
+alias y='yarn'
+alias yr='y run'
+alias yd='yr dev'
+
+alias fzwiki='fzwiki -l ja -o'
+
+# Why don't you use Vi instead of Emacs?
+alias emacs='vi'
+
+hash -d d='$HOME/src/github.com/$GITHUB_USER'
