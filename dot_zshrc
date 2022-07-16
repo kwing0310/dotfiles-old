@@ -98,3 +98,5 @@ alias fzwiki='fzwiki -l ja -o'
 alias emacs='vi'
 
 hash -d d='$HOME/src/github.com/$GITHUB_USER'
+
+eval "$(starship init zsh)"
