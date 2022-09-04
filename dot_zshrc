@@ -86,7 +86,7 @@ alias cc='ch cd'
 alias s='ssh'
 alias v='nvim'
 alias vv='v -c NERDTree -c Tagbar'
-alias w='w3m'
+alias w='cd $HOME/src/github.com/$GITHUB_USER'
 
 alias y='yarn'
 alias yr='y run'
@@ -97,6 +97,17 @@ alias fzwiki='fzwiki -l ja -o'
 # Why don't you use Vi instead of Emacs?
 alias emacs='vi'
 
-hash -d d='$HOME/src/github.com/$GITHUB_USER'
-
+eval "$(sheldon source)"
 eval "$(starship init zsh)"
+
+# Highlight styles
+typeset -A ZSH_HIGHLIGHT_STYLES
+ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=red'
+ZSH_HIGHLIGHT_STYLES[command]='fg=blue'
+ZSH_HIGHLIGHT_STYLES[path]='fg=cyan,underline'
+ZSH_HIGHLIGHT_STYLES[default]='fg=cyan'
+
+[[ -d ~/.rbenv  ]] && \
+  export PATH=${HOME}/.rbenv/bin:${PATH} && \
+  eval "$(rbenv init -)"
+

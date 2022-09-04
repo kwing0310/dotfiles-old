@@ -14,6 +14,7 @@ Plug 'szw/vim-tags'
 Plug 'preservim/tagbar'
 Plug 'lervag/vimtex'
 Plug 'mattn/emmet-vim'
+Plug 'wuelnerdotexe/vim-astro'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/goyo.vim'
 
